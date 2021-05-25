@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 18, 2021 at 10:17 AM
+-- Generation Time: May 25, 2021 at 07:05 PM
 -- Server version: 10.4.18-MariaDB
 -- PHP Version: 7.4.16
 
@@ -40,7 +40,9 @@ CREATE TABLE `categories` (
 --
 
 INSERT INTO `categories` (`id`, `name`, `slug`, `created_at`, `updated_at`) VALUES
-(1, 'Roadshow', 'roadshow', '2021-05-18 00:13:24', '2021-05-18 00:13:24');
+(1, 'Roadshow', 'roadshow', '2021-05-18 00:13:24', '2021-05-18 00:13:24'),
+(2, 'implementasi pelatihan bebras', 'implementasi-pelatihan-bebras', '2021-05-25 08:47:44', '2021-05-25 08:47:44'),
+(3, 'acara gerakan pandai bebras', 'acara-gerakan-pandai-bebras', '2021-05-25 08:48:36', '2021-05-25 08:48:36');
 
 -- --------------------------------------------------------
 
@@ -64,7 +66,7 @@ CREATE TABLE `events` (
 --
 
 INSERT INTO `events` (`id`, `title`, `slug`, `content`, `location`, `date`, `created_at`, `updated_at`) VALUES
-(1, 'roadshow', 'roadshow', 'roadshow bebras', 'lombok timur', '2021-05-18', '2021-05-18 00:14:52', '2021-05-18 00:14:52');
+(2, 'pelatihan bebras computational thinking di klu', 'pelatihan-bebras-computational-thinking-di-klu', 'pelatihan bebras computational thinking di klu', 'KLU', '2020-11-11', '2021-05-25 08:52:54', '2021-05-25 08:52:54');
 
 -- --------------------------------------------------------
 
@@ -140,7 +142,11 @@ CREATE TABLE `photos` (
 --
 
 INSERT INTO `photos` (`id`, `image`, `caption`, `created_at`, `updated_at`) VALUES
-(1, '1621325720_7f94593f51974c7699df28c2a65e58707d34c184.jpg', 'acara roadshow bebras di lotim', '2021-05-18 00:15:20', '2021-05-18 00:15:20');
+(4, '1621960775_workshop bebras pertama di STMIK bumigora_1.jpg', 'workshop bebras pertama di STMIK bumigora 1', '2021-05-25 08:39:35', '2021-05-25 08:39:35'),
+(5, '1621960795_workshop bebras pertama di STMIK bumigora_2.jpg', 'workshop bebras pertama di STMIK bumigora 2', '2021-05-25 08:39:55', '2021-05-25 08:39:55'),
+(6, '1621960843_NURUL ISLAM.jpg', 'Penyerahan sertifikat penghargaan kepada guru di nurul islam', '2021-05-25 08:40:43', '2021-05-25 08:40:43'),
+(7, '1621960935_AIKMUAL.jpg', 'Sosialisasi dan Implementasi gerakan pandai bebras computational thinking di aik mual lombok tengah', '2021-05-25 08:42:15', '2021-05-25 08:42:15'),
+(8, '1621960998_nw SELAPARANG.jpg', 'Sosialisasi dan Implementasi gerakan pandai bebras computational thinking di NW SELAPARANG', '2021-05-25 08:43:18', '2021-05-25 08:43:18');
 
 -- --------------------------------------------------------
 
@@ -164,7 +170,7 @@ CREATE TABLE `posts` (
 --
 
 INSERT INTO `posts` (`id`, `image`, `title`, `slug`, `category_id`, `content`, `created_at`, `updated_at`) VALUES
-(1, '1621325662_7de8eae3260fabc930c8d4778d1c3eda9a30dc53.png', 'roadshow di lombok timur', 'roadshow-di-lombok-timur', 1, '<p>acara roadshow bebras di lombok timur&nbsp;</p>', '2021-05-18 00:14:22', '2021-05-18 00:14:22');
+(3, '1621961442_bebras.png', 'peluncuran website bebras biro NTB Universitas Bumigora Mataram', 'peluncuran-website-bebras-biro-ntb-universitas-bumigora-mataram', 3, '<p>Mulai Bulan Juni peluncuran website bebras biro NTB Universitas Bumigora Mataram</p>', '2021-05-25 08:50:42', '2021-05-25 08:50:42');
 
 -- --------------------------------------------------------
 
@@ -205,7 +211,11 @@ CREATE TABLE `sliders` (
 --
 
 INSERT INTO `sliders` (`id`, `image`, `created_at`, `updated_at`) VALUES
-(1, '1621325781_8dacadaa118660002a6b27f0ce3ccdcb0add5d39.jpg', '2021-05-18 00:16:21', '2021-05-18 00:16:21');
+(2, '1621961027_KLU_5.jpg', '2021-05-25 08:43:47', '2021-05-25 08:43:47'),
+(3, '1621961045_KLU_4.jpg', '2021-05-25 08:44:05', '2021-05-25 08:44:05'),
+(4, '1621961063_53794398_10156433771887730_4130309915002535936_n.jpg', '2021-05-25 08:44:23', '2021-05-25 08:44:23'),
+(5, '1621961080_86643713_10157301920357730_5113133096731934720_n.jpg', '2021-05-25 08:44:40', '2021-05-25 08:44:40'),
+(7, '1621961119_46281422_10156198231277730_258653126817480704_n.jpg', '2021-05-25 08:45:19', '2021-05-25 08:45:19');
 
 -- --------------------------------------------------------
 
@@ -231,7 +241,8 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `role_id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
 (1, 1, 'Admin', 'admin@gmail.com', NULL, '$2y$10$zc74.Ni/Iy0LLYSGtxSgdOY7q/2t742yfq/P8/uymW.54fTGVrkvi', NULL, '2021-05-18 00:12:17', '2021-05-18 00:12:17'),
-(2, 2, 'User', 'user@gmail.com', NULL, '$2y$10$uV1WZW0XYEfcesyiR5.h3emHOaUQGa6PzgOMjyHtxwAHts7KoJHpW', NULL, '2021-05-18 00:12:17', '2021-05-18 00:12:17');
+(2, 2, 'User', 'user@gmail.com', NULL, '$2y$10$uV1WZW0XYEfcesyiR5.h3emHOaUQGa6PzgOMjyHtxwAHts7KoJHpW', NULL, '2021-05-18 00:12:17', '2021-05-18 00:12:17'),
+(3, 1, 'kartarina', 'kartarina@gmail.com', '2021-05-25 16:56:44', '25d55ad283aa400af464c76d713c07ad', NULL, '2021-05-25 16:56:44', '2021-05-25 16:56:44');
 
 -- --------------------------------------------------------
 
@@ -251,7 +262,7 @@ CREATE TABLE `videos` (
 --
 
 INSERT INTO `videos` (`id`, `link`, `created_at`, `updated_at`) VALUES
-(1, 'https://youtu.be/GxrsDSx5Hr8', '2021-05-18 00:16:01', '2021-05-18 00:16:01');
+(33, 'https://www.youtube.com/embed/_bNMGyKaIMo', '2021-05-25 08:27:59', '2021-05-25 08:27:59');
 
 --
 -- Indexes for dumped tables
@@ -333,13 +344,13 @@ ALTER TABLE `videos`
 -- AUTO_INCREMENT for table `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `events`
 --
 ALTER TABLE `events`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`
@@ -357,13 +368,13 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `photos`
 --
 ALTER TABLE `photos`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `posts`
 --
 ALTER TABLE `posts`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `roles`
@@ -375,19 +386,19 @@ ALTER TABLE `roles`
 -- AUTO_INCREMENT for table `sliders`
 --
 ALTER TABLE `sliders`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `videos`
 --
 ALTER TABLE `videos`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
 -- Constraints for dumped tables

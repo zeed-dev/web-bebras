@@ -6,7 +6,7 @@
         <h1>Video</h1>
 
         <div class="section-header-breadcrumb">
-            <div class="breadcrumb-item activcleae"><a href="{{ route('admin.dashboard.index') }}">Beranda</a></div>
+            <div class="breadcrumb-item active"><a href="{{ route('admin.dashboard.index') }}">Beranda</a></div>
             <div class="breadcrumb-item">Video</div>
         </div>
     </div>
