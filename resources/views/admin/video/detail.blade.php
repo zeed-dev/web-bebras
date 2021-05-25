@@ -6,7 +6,7 @@
         <h1>Video</h1>
 
         <div class="section-header-breadcrumb">
-            <div class="breadcrumb-item active"><a href="{{ route('admin.dashboard.index') }}">Beranda</a></div>
+            <div class="breadcrumb-item activcleae"><a href="{{ route('admin.dashboard.index') }}">Beranda</a></div>
             <div class="breadcrumb-item">Video</div>
         </div>
     </div>
@@ -21,12 +21,8 @@
                 </div>
             </div>
             <div class="card-body">
-            @php
-            $yt_code = explode('https://www.youtube.com/watch?v=', $video->link)[1] ?? explode('https://youtu.be/', $video->link)[1] ?? null;
-            @endphp
-            
-            <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" width="100%" height="443" type="text/html" src="{{ 'https://www.youtube.com/embed/' . $yt_code }}">
-                </iframe>
+            <iframe width="560" height="315" src={{$video->link}}
+            <width="560" height="315" frameborder="0"></iframe>
             </div>
         </div>
     </div>
