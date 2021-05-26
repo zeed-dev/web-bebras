@@ -29,7 +29,7 @@
                             <tr>
                                 <th>No</th>
                                 <th>Link</th>
-                                <th></th>
+                                <th>Action</th>
                             </tr>
                         </thead>
                         <tbody>
